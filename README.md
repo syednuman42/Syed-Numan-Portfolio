@@ -1,6 +1,6 @@
 # Syed_Portfolio
 
-# [Project 1: DATA ANALYSIS of Movie Ratings](https://github.com/fivethirtyeight/data)
+# [Project 1: DATA ANALYSIS of Movie Ratings](https://github.com/fivethirtyeight/data/tree/master/fandango)
 
 Goal: Is there a conflict of interest for a website that both sells movie tickets and diplays review ratings?
 Does a website like Fandango artificially display higher review ratings to sell more movie tickets?
