@@ -1,18 +1,26 @@
 # [Project 1: DATA ANALYSIS OF MOVIE RATINGS](https://github.com/fivethirtyeight/data/tree/master/fandango)
 
+
 ## Goal: Is there a conflict of interest for a website that both sells movie tickets and diplays review ratings? Does a website like Fandango artificially display higher review ratings to sell more movie tickets?
+
+
 ## Tasks Performed: 
 - Imported the data and read about the Background of the Data 
 - Explored Fandango Displayed Scores versus True User Ratings
 - Compared Fandango Ratings to Other Sites
 
+
 ![](https://raw.githubusercontent.com/syednuman42/Syed_Portfolio/main/images/hickey-datalab-fandango-2.png)
 
+
+
 ## Importing the DATA and understanding it's Background:
+
 
 After carefully reading the article and understanding the objective of the project, the necessary libraries and the csv files which contain the ratings of the movies from various movie review platforms were imported in the jupyter notebook.
 
 ![](https://raw.githubusercontent.com/syednuman42/Syed_Portfolio/main/images/fandango_data.PNG)
+
 
 
 Then an exploratory data analysis was done to determine the relationships between the features of the dataset. 
@@ -21,7 +29,10 @@ Then an exploratory data analysis was done to determine the relationships betwee
 
 ![](https://raw.githubusercontent.com/syednuman42/Syed_Portfolio/main/images/eda2.png)
 
-Data Cleaning was done to remove all the films that had zero votes
+
+Data Cleaning was done to remove all the films that had zero votes.
+
+
 
 ## Explored Fandango Displayed Scores versus True User Ratings:
 
@@ -60,7 +71,10 @@ Furthermore, The ratings of the top 10 worst movies on fandango were compared wi
 
 ![](https://github.com/syednuman42/Syed_Portfolio/blob/main/images/worst%20movies.PNG?raw=true)
 
+
 ![](https://github.com/syednuman42/Syed_Portfolio/blob/main/images/kde%20of%20worst%20movies.png?raw=true)
+
+
 
 ### Conclusion : Fandango artificially displays higher ratings than warranted to boost ticket sales
 
