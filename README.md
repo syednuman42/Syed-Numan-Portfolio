@@ -7,3 +7,5 @@ Does a website like Fandango artificially display higher review ratings to sell 
 Tasks Performed: Imported the data and read about the Background of the Data 
 Explored Fandango Displayed Scores versus True User Ratings
 Compared Fandango Ratings to Other Sites
+
+![](https://raw.githubusercontent.com/syednuman42/Syed_Portfolio/main/images/hickey-datalab-fandango-2.png)
