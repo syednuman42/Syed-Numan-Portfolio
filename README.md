@@ -1,10 +1,10 @@
 # [Project 1: DATA ANALYSIS OF MOVIE RATINGS](https://github.com/fivethirtyeight/data/tree/master/fandango)
 
 
-## Goal: Is there a conflict of interest for a website that both sells movie tickets and diplays review ratings? Does a website like Fandango artificially display higher review ratings to sell more movie tickets?
+### Goal: Is there a conflict of interest for a website that both sells movie tickets and diplays review ratings? Does a website like Fandango artificially display higher review ratings to sell more movie tickets?
 
 
-## Tasks Performed: 
+### Tasks Performed: 
 - Imported the data and read about the Background of the Data 
 - Explored Fandango Displayed Scores versus True User Ratings
 - Compared Fandango Ratings to Other Sites
