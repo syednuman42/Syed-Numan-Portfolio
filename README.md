@@ -5,7 +5,7 @@
 
 
 ### Tasks Performed: 
-- Imported the data and read about the Background of the Data 
+- Imported the data and researched about the background of the data.
 - Explored Fandango Displayed Scores versus True User Ratings
 - Compared Fandango Ratings to Other Sites
 
