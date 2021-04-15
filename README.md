@@ -1,5 +1,4 @@
 # Syed_Portfolio
-Data Science Portfolio
 
 DATA ANALYSIS of Movie Ratings
 Is there a conflict of interest for a website that both sells movie tickets and diplays review ratings?
