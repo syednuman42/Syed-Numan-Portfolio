@@ -14,7 +14,7 @@
 
 
 
-## Importing the DATA and understanding it's Background:
+## Part I : Importing the DATA and understanding it's Background:
 
 
 After carefully reading the article and understanding the objective of the project, the necessary libraries and the csv files which contain the ratings of the movies from various movie review platforms were imported in the jupyter notebook.
@@ -34,7 +34,7 @@ Data Cleaning was done to remove all the films that had zero votes.
 
 
 
-## Explored Fandango Displayed Scores versus True User Ratings:
+## Part 2: Exploring Fandango's Displayed Scores versus True User Ratings:
 
 In order to examine the article's insinuation that Fandango doesn’t round a rating down when we’d mathematically expect it, a KDE plot was created that displayed the distribution of ratings that are displayed (STARS) on the website versus the true ratings that were from the votes (RATING) of users. The distribution of the kde plot of STARS DISPLAYED vs RATINGS FROM USERS indicated the same.
 
@@ -45,7 +45,7 @@ This discrepancy was then quantified and a count plot was created to display the
 
 ![](https://github.com/syednuman42/Syed_Portfolio/blob/main/images/difference%20in%20ratings.png?raw=true)
 
-## Comparison of Fandango Ratings to Other Sites:
+## Part III : Comparison of Fandango's ratings with the ratings on other sites:
 
 Since we only want to compare moves that are in both DataFrames (The Fandango Table and the All Sites table), they were combined using an inner merge based on the FILM column.
 
