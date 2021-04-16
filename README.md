@@ -212,6 +212,11 @@ We can see that both of these meta-learning methods performed quite well as they
 
 # Project 3: CHURN ANALYSIS AND CLASSIFICATION
 
+### Background of the data: The data set includes information about
+- Customers who left within the last month – the column is called Churn
+- Services that each customer has signed up for – phone, multiple lines, internet, online security, online backup, device protection, tech support, and streaming TV and movies
+- Customer account information – how long they’ve been a customer, contract, payment method, paperless billing, monthly charges, and total charges
+- Demographic info about customers – gender, age range, and if they have partners and dependents
 
 ### Objective: 
 - To analyze the characteristics of the customers that discontinued a service (churned). 
@@ -345,7 +350,7 @@ AdaBoost is performing slightly better than a decision tree model
 ![](https://github.com/syednuman42/Syed-Numan-Portfolio/blob/main/Project%202/images/conf%20matrix%20svm.png?raw=true)
 
 
-### Conclusion: Since all the methods are performing kind of similar. This might be the best possible outcome for this task. In addition to this, we could do some feature engineering and a grid search to improve the model.
+### Conclusion: Since all the methods are performing kind of similar. This might be the best possible outcome for this task. In addition to this, we could do some feature engineering or a grid search to improve the model.
 
 
 
