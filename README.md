@@ -210,6 +210,8 @@ We can see that both of these meta-learning methods performed quite well as they
 
 
 
+
+
 # Project 3: CHURN ANALYSIS AND CLASSIFICATION
 
 ### Background of the data: The data set includes information about
@@ -244,10 +246,11 @@ We can confirm that there is no missing data by checking for null values
 
 Checking the balance of the class label(Churn) with a countplot:
 
-![](https://github.com/syednuman42/Syed-Numan-Portfolio/blob/main/Project%202/images/churn%20countplot.png)
+![](https://github.com/syednuman42/Syed-Numan-Portfolio/blob/main/Project%202/images/churn%20countplot.png?raw=true)
 
 
 The class label looks slightly imbalanced. However, there are quite a few instances of both the categories.
+
 
 
 The feature - 'Contract type' has 3 categories: month-to-month, one year and two year contract type
@@ -259,11 +262,10 @@ We wish to explore the distribution of TotalCharges per Contract type and separa
 
 We can see that for contract type month to month, the distribution of customers who have churned is similar to that of those that did not churn. One possible reason for this could be that it is likely that **a customer that chooses month to month service does not plan to stay for a long period of time**.
 
-What's interesting is that for the customers who have churned in the one/two year contract type the total charge's median is more than that of the people who did not churn
-This implies that ** one/two year contract customers are more likely to churn if they had more total charge**
+What's interesting is that for the customers who have churned in the one/two year contract type the total charge's median is more than that of the people who did not churn.
+This implies that **one/two year contract customers are more likely to churn if they had more total charge**
 
 Assuming we cannot do much about the customers in the month-to-month category, our main objective now is to reduce churn rate for one and two year contract.
-
 To do this we have to look deeper into the data to find out how to lower the charges for one/two year contract
 
 The correlation between the features and the target label(churn):
