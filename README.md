@@ -356,3 +356,115 @@ AdaBoost is performing slightly better than a decision tree model
 
 
 
+# Project 4: UNSUPERVISED LEARNING USING KMeans CLUSTERING
+
+
+### Goal: To gain insights into the similarites between countries and regions of the world by experimenting with different value of clusters.
+
+
+## Part 1 : Exploring the data
+Import the necessary libraries and the data
+
+![](https://github.com/syednuman42/Syed-Numan-Portfolio/blob/main/Project4/images/dfhead.PNG?raw=true)
+
+Exploring the rows and columns of the data as well as the data types of the columns.
+
+1[](https://github.com/syednuman42/Syed-Numan-Portfolio/blob/main/Project4/images/dfinfo.PNG)
+
+
+There are 227 entries with 20 columns
+
+Exploring the Population column with a histogram:
+
+![](https://github.com/syednuman42/Syed-Numan-Portfolio/blob/main/Project4/images/population%20countplot.png?raw=true)
+
+Due to a few large countries, the X axis is changed to only show the countries with less than 0.5 billion people
+
+Now, let's explore GDP per capita and Regions using a bar chart:
+
+![](https://github.com/syednuman42/Syed-Numan-Portfolio/blob/main/Project4/images/gdp%20vs%20region.png?raw=true)
+
+
+We can see that two regions (north america and western europe) in the world are way higher than the others
+
+The black bar represents standard deviation. In north america, the deviation is large because the United States is a huge outlier with a high GDP per capita
+
+
+Scatterplot showing the relationship between Phones per 1000 people and the GDP per Capita colored by Region:
+
+![](https://github.com/syednuman42/Syed-Numan-Portfolio/blob/main/Project4/images/gdp%20vs%20phones.png?raw=true)
+
+
+As gdp per capita grows, the phones per 1000 also grows
+
+Scatterplot showing the relationship between GDP per Capita and Literacy colored  by Region:
+
+![](https://github.com/syednuman42/Syed-Numan-Portfolio/blob/main/Project4/images/gdp%20vs%20literacy.png?raw=true)
+
+
+For low gdp, the literacy rate varies greatly but generally if the literacy rate is low then gdp will be less than 10000.
+And when we pass this 10000 gdp threshold, every country has a literacy rate of 90% or above
+
+
+Create a clustermap which auto performs hierarchal clustering of the correlations between columns:
+
+![](https://github.com/syednuman42/Syed-Numan-Portfolio/blob/main/Project4/images/clustermap.png?raw=true)
+
+
+## Data Preparation and Model Discovery
+
+Check for missing data:
+
+![](https://github.com/syednuman42/Syed-Numan-Portfolio/blob/main/Project4/images/isnull1.PNG?raw=true)
+
+Most of the countries that have NaN for Agriculture are islands with the exception of Greenland and Western Sahara,
+
+![](https://github.com/syednuman42/Syed-Numan-Portfolio/blob/main/Project4/images/country%20is%20null1.PNG?raw=true)
+
+So we will fill the missing value with 0 assuming that agriculture is not a signficant part of their economy
+
+Checking for missing data again 
+
+![](https://github.com/syednuman42/Syed-Numan-Portfolio/blob/main/Project4/images/isnull2.PNG?raw=true)
+
+We can see that industry and service are also no longer missing values. This makes sense as most of the countries where agriculture was zero were tiny islands where industry and service are also not a major part of the economy
+
+It can be noticed that climate and literacy % are missing for a few countries, but not the Region! Therefore, we can fill in the their missing values based on the mean value for its region. 
+
+![](https://github.com/syednuman42/Syed-Numan-Portfolio/blob/main/Project4/images/groupby.PNG?raw=true)
+
+Checking again for missing values, we can see that only a few missing values are left. For simplicity, we can drop these rows
+
+It is now time to prepare the data for clustering. The Country column is still a unique identifier string, so it won't be useful for clustering, since it's unique for each point. For the categorical features, dummy variables are created.
+
+Due to some measurements being in terms of percentages and other metrics being total counts (population), we should scale this data first.
+
+### Creating and Fitting Kmeans Model
+
+Multiple KMeans models, testing from K=2-30 clusters are created and the Sum of Squared Distances(SSD) for each K value is stored, SSD values are plotted:
+
+![](https://github.com/syednuman42/Syed-Numan-Portfolio/blob/main/Project4/images/ssd.png?raw=true)
+
+
+We select a suitable value for k by looking at significant drop off in the value of SSD
+
+A K value of 5 seems like a good choice to cluster countries based on the given features. As this is an unsupervised learning model, there isn't a 100% correct answer.
+
+
+A bar plot showing the correlation of features with the cluster labels predicted by the Kmeans Model with 5 clusters:
+
+![](https://github.com/syednuman42/Syed-Numan-Portfolio/blob/main/Project4/images/corr%20of%20feat%20with%20label.png?raw=true)
+
+
+
+The best way to interpret this model is through visualizing the clusters of countries on a map : 
+
+![](https://github.com/syednuman42/Syed-Numan-Portfolio/blob/main/Project4/images/plotly.PNG?raw=true)
+
+
+
+### Conclusion - Based on the features we were able to distinguish five main clusters of countries which are suprisingly good for an unsupervised model!
+
+
+ 
+
