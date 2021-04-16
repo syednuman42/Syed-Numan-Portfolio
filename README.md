@@ -369,7 +369,7 @@ Import the necessary libraries and the data
 
 Exploring the rows and columns of the data as well as the data types of the columns.
 
-1[](https://github.com/syednuman42/Syed-Numan-Portfolio/blob/main/Project4/images/dfinfo.PNG)
+![](https://github.com/syednuman42/Syed-Numan-Portfolio/blob/main/Project4/images/dfinfo.PNG)
 
 
 There are 227 entries with 20 columns
@@ -385,9 +385,9 @@ Now, let's explore GDP per capita and Regions using a bar chart:
 ![](https://github.com/syednuman42/Syed-Numan-Portfolio/blob/main/Project4/images/gdp%20vs%20region.png?raw=true)
 
 
-We can see that two regions (north america and western europe) in the world are way higher than the others
+It can seen that two regions (north america and western europe) in the world are way higher than the others
 
-The black bar represents standard deviation. In north america, the deviation is large because the United States is a huge outlier with a high GDP per capita
+**The black bar represents standard deviation. In north america, the deviation is large because the United States is a huge outlier with a high GDP per capita**
 
 
 Scatterplot showing the relationship between Phones per 1000 people and the GDP per Capita colored by Region:
@@ -402,18 +402,18 @@ Scatterplot showing the relationship between GDP per Capita and Literacy colored
 ![](https://github.com/syednuman42/Syed-Numan-Portfolio/blob/main/Project4/images/gdp%20vs%20literacy.png?raw=true)
 
 
-For low gdp, the literacy rate varies greatly but generally if the literacy rate is low then gdp will be less than 10000.
-And when we pass this 10000 gdp threshold, every country has a literacy rate of 90% or above
+**For low gdp, the literacy rate varies greatly but generally if the literacy rate is low then gdp will be less than 10000.
+And when this 10000 gdp threshold is crossed, every country has a literacy rate of 90% or above**
 
 
-Create a clustermap which auto performs hierarchal clustering of the correlations between columns:
+A clustermap which auto performs hierarchal clustering of the correlations between columns:
 
 ![](https://github.com/syednuman42/Syed-Numan-Portfolio/blob/main/Project4/images/clustermap.png?raw=true)
 
 
-## Data Preparation and Model Discovery
+## Part 2 : Data Preparation and Model Discovery 
 
-Check for missing data:
+Checking for missing data:
 
 ![](https://github.com/syednuman42/Syed-Numan-Portfolio/blob/main/Project4/images/isnull1.PNG?raw=true)
 
@@ -427,17 +427,17 @@ Checking for missing data again
 
 ![](https://github.com/syednuman42/Syed-Numan-Portfolio/blob/main/Project4/images/isnull2.PNG?raw=true)
 
-We can see that industry and service are also no longer missing values. This makes sense as most of the countries where agriculture was zero were tiny islands where industry and service are also not a major part of the economy
+**Industry and Service are also no longer missing values! This makes sense as most of the countries where agriculture was zero were tiny islands where industry and service are also not a major part of the economy**
 
-It can be noticed that climate and literacy % are missing for a few countries, but not the Region! Therefore, we can fill in the their missing values based on the mean value for its region. 
+**Climate and literacy % are missing for a few countries, but not the Region! Therefore, we can fill in the their missing values based on the mean value for its region.** 
 
 ![](https://github.com/syednuman42/Syed-Numan-Portfolio/blob/main/Project4/images/groupby.PNG?raw=true)
 
 Checking again for missing values, we can see that only a few missing values are left. For simplicity, we can drop these rows
 
-It is now time to prepare the data for clustering. The Country column is still a unique identifier string, so it won't be useful for clustering, since it's unique for each point. For the categorical features, dummy variables are created.
+It is now time to prepare the data for clustering. The Country column is still a unique identifier string, so it won't be useful for clustering. Dummy variables should be created for the categorical features.
 
-Due to some measurements being in terms of percentages and other metrics being total counts (population), we should scale this data first.
+Moreover, due to some measurements being in terms of percentages and other metrics being total counts (population), we should also scale this data first.
 
 ### Creating and Fitting Kmeans Model
 
@@ -463,7 +463,7 @@ The best way to interpret this model is through visualizing the clusters of coun
 
 
 
-### Conclusion - Based on the features we were able to distinguish five main clusters of countries which are suprisingly good for an unsupervised model!
+### Conclusion - Based on the features we were able to distinguish five main clusters of countries which are suprisingly good for an unsupervised model !
 
 
  
