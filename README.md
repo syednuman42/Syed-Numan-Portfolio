@@ -1,8 +1,7 @@
-# [Project 1: AADHAAR MASKING REALTIME DASHBOARD
+# AADHAAR MASKING REALTIME DASHBOARD : AI WORKS 
 
 
-### Goal: Is there a conflict of interest for a website that both sells movie tickets and diplays review ratings? Does a website like Fandango artificially display higher review ratings to sell more movie tickets?
-
+### Goal: CLASSIFY STOCK DOCUMENTS CONTAINING AADHAAR NUMBER AND MASK THE FIRST 8 DIGITS
 
 ### Tasks Performed: 
 - Imported the data and researched about the background of the data.
