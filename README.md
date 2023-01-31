@@ -1,4 +1,3 @@
-  <!DOCTYPE html>
 <html>
   <head>
   </head>
@@ -13,7 +12,7 @@
     
     <video onclick="snapshot(this);" width=300 height=300 id="video" controls autoplay></video>
 
-            </pre>
+  
    <pre>              Input Frame                              Detection Output </pre>
 
 <canvas  id="myCanvas" width="300" height="300"></canvas>  
@@ -115,7 +114,7 @@ document.getElementById("img").src = result['body']
 
 
 
-# CHANGED 4 AADHAAR MASKING REALTIME DASHBOARD : AI WORK
+# MOVIE RATINGS ANALYSIS
 
 
 ### Goal: CLASSIFY STOCK DOCUMENTS CONTAINING AADHAAR NUMBER AND MASK THE FIRST 8 DIGITS
