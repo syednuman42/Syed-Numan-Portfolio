@@ -83,7 +83,7 @@
         let result = await fetch("https://t79bfastr5.execute-api.ap-south-1.amazonaws.com/default/corsdemo", {                      
             method: "post",  
              headers: {
-                'Content-Type': 'application/json'},
+                'content-type': 'application/json'},
             body: JSON.stringify(datatosend)
              })
         .then(response=>response.json())
@@ -99,7 +99,7 @@ async function snapshot2() {
         let result = await fetch("https://t79bfastr5.execute-api.ap-south-1.amazonaws.com/default/corsdemo", {                      
             method: "post",  
              headers: {
-                'Content-Type': 'application/json'},
+                'content-type': 'application/json'},
             body: JSON.stringify(datatosend)
              })
         .then(response=>response.json())
