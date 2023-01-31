@@ -80,7 +80,7 @@
         img = canvas.toDataURL("image/jpeg").split(';base64,')[1];
         // console.log(img);
         datatosend = {'project':1,'byte_image':img};
-        let result = await fetch("https://t79bfastr5.execute-api.ap-south-1.amazonaws.com/default/portfolio", {                      
+        let result = await fetch("https://t79bfastr5.execute-api.ap-south-1.amazonaws.com/default/corsdemo", {                      
             method: "post",  
              headers: {
                 'Content-Type': 'application/json'},
@@ -96,7 +96,7 @@ async function snapshot2() {
         img = canvas.toDataURL("image/jpeg").split(';base64,')[1];
         // console.log(img);
         datatosend = {'project':2,'byte_image':img};
-        let result = await fetch("https://t79bfastr5.execute-api.ap-south-1.amazonaws.com/default/portfolio", {                      
+        let result = await fetch("https://t79bfastr5.execute-api.ap-south-1.amazonaws.com/default/corsdemo", {                      
             method: "post",  
              headers: {
                 'Content-Type': 'application/json'},
