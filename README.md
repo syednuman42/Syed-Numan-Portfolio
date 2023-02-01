@@ -107,8 +107,6 @@ async function snapshot2() {
              })
         .then(response=>response.json())
 
-console.log(result)
-
 document.getElementById("img").src = result
       }
 
