@@ -96,7 +96,7 @@ async function snapshot2() {
         img = canvas.toDataURL("image/jpeg").split(';base64,')[1];
         // console.log(img);
         datatosend = {'project':2,'byte_image':img};
-        let result = await fetch("https://t79bfastr5.execute-api.ap-south-1.amazonaws.com/default", {                      
+        let result = await fetch("https://t79bfastr5.execute-api.ap-south-1.amazonaws.com/default/portfolio", {                      
             method: "post",  
              headers: {
                 'content-type': 'application/json'},
