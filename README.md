@@ -79,8 +79,8 @@
         canvas.getContext('2d').drawImage(video, 0, 0, 300,300);   
         img = canvas.toDataURL("image/jpeg").split(';base64,')[1];
         // console.log(img);
-        datatosend = {'project':1,'byte_image':img};
-        let result = await fetch("https://t79bfastr5.execute-api.ap-south-1.amazonaws.com/default", {                      
+        datatosend = {'project':2,'byte_image':img};
+        let result = await fetch("https://t79bfastr5.execute-api.ap-south-1.amazonaws.com/default/portfolio", {                      
             method: "post",  
              headers: {
                 'content-type': 'application/json'},
