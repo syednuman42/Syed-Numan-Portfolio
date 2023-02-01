@@ -109,7 +109,7 @@ async function snapshot2() {
 
 console.log(result)
 
-document.getElementById("img").src = result['body'].split(';base64,')[1];
+document.getElementById("img").src = result['body']
       }
 
 
