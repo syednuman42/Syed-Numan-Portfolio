@@ -2,7 +2,7 @@
   <head>
   </head>
   <body onload="init();">
-    <h1>Aadhaar Redaction / Selfie Recapture Detection Live Demo</h1>
+    <h1>V1Aadhaar Redaction / Selfie Recapture Detection Live Demo</h1>
    Click on the Start WebCam, then proceed to take photo.
      <p>
     <button onclick="startWebcam();">Start WebCam</button>
@@ -82,6 +82,7 @@
         datatosend = {'project':2,'byte_image':img};
         let result = await fetch("https://t79bfastr5.execute-api.ap-south-1.amazonaws.com/default/portfolio", {                      
             method: "post",  
+            mode : "cors",
              headers: {
                 'content-type': 'application/json'},
             body: JSON.stringify(datatosend)
@@ -98,6 +99,7 @@ async function snapshot2() {
         datatosend = {'project':2,'byte_image':img};
         let result = await fetch("https://t79bfastr5.execute-api.ap-south-1.amazonaws.com/default/portfolio", {                      
             method: "post",  
+            mode : "cors",
              headers: {
                 'content-type': 'application/json'},
             body: JSON.stringify(datatosend)
