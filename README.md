@@ -2,7 +2,7 @@
   <head>
   </head>
   <body onload="init();">
-    <h1>V3Aadhaar Redaction / Selfie Recapture Detection Live Demo</h1>
+    <h1>V4Aadhaar Redaction / Selfie Recapture Detection Live Demo</h1>
    Click on the Start WebCam, then proceed to take photo.
      <p>
     <button onclick="startWebcam();">Start WebCam</button>
@@ -105,7 +105,8 @@ async function snapshot2() {
             body: JSON.stringify(datatosend)
              })
         .then(response=>response.json())
-.then(console.log(result))
+
+console.log(result)
 
 document.getElementById("img").src = result['body']
       }
