@@ -2,7 +2,7 @@
   <head>
   </head>
   <body onload="init();">
-    <h1>V6: Aadhaar Redaction / Selfie Recapture Detection Live Demo</h1>
+    <h1>V7: Aadhaar Redaction / Selfie Recapture Detection Live Demo</h1>
    Click on the Start WebCam, then proceed to take photo.
      <p>
     <button onclick="startWebcam();">Start WebCam</button>
@@ -91,6 +91,7 @@
 
 document.getElementById("img").src = result
       }
+
 async function snapshot2() {
          // Draws current image from the video element into the canvas
         canvas.getContext('2d').drawImage(video, 0, 0, 300,300);   
@@ -108,7 +109,7 @@ async function snapshot2() {
 
 console.log(result)
 
-document.getElementById("img").src = result['body']
+document.getElementById("img").src = result['body'].split(';base64,')[1];
       }
 
 
