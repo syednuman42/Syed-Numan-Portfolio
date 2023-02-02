@@ -2,7 +2,7 @@
   <head>
   </head>
   <body onload="init();">
-    <h1>V17: Aadhaar Masking / Selfie Recapture Detection Live Demo</h1>
+    <h1>V18: Aadhaar Masking / Selfie Recapture Detection Live Demo</h1>
    Click on the Start WebCam, then proceed to take photo.
      <p>
     <button onclick="startWebcam();">Start WebCam</button>
@@ -103,7 +103,7 @@ async function snapshot2() {
         datatosend = {'project':2,'byte_image':img};
         let result = await fetch("https://t79bfastr5.execute-api.ap-south-1.amazonaws.com/default/portfolio", {                      
             method: "post",  
-            mode : "no-cors",
+            mode : "cors",
              headers: {
                
                 'content-type': 'application/json'},
