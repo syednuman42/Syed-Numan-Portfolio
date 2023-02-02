@@ -2,7 +2,7 @@
   <head>
   </head>
   <body onload="init();">
-    <h1>V13: Aadhaar Masking / Selfie Recapture Detection Live Demo</h1>
+    <h1>V14: Aadhaar Masking / Selfie Recapture Detection Live Demo</h1>
    Click on the Start WebCam, then proceed to take photo.
      <p>
     <button onclick="startWebcam();">Start WebCam</button>
@@ -20,8 +20,6 @@
 
   </body>
   <script>
-import api_key from './apikey.js'
-        console.log(api_key)
 
       //--------------------
       // GET USER MEDIA CODE
