@@ -2,7 +2,7 @@
   <head>
   </head>
   <body onload="init();">
-    <h1>V12: Aadhaar Masking / Selfie Recapture Detection Live Demo</h1>
+    <h1>V13: Aadhaar Masking / Selfie Recapture Detection Live Demo</h1>
    Click on the Start WebCam, then proceed to take photo.
      <p>
     <button onclick="startWebcam();">Start WebCam</button>
@@ -20,6 +20,8 @@
 
   </body>
   <script>
+import api_key from './apikey.js'
+        console.log(api_key)
 
       //--------------------
       // GET USER MEDIA CODE
@@ -75,8 +77,7 @@
       }
 
       async function snapshot() {
-        import api_key from './apikey.js'
-        console.log(api_key)
+
          // Draws current image from the video element into the canvas
         canvas.getContext('2d').drawImage(video, 0, 0, 300,300);   
         img = canvas.toDataURL("image/jpeg").split(';base64,')[1];
@@ -96,8 +97,7 @@ document.getElementById("img").src = result
       }
 
 async function snapshot2() {
-        import api_key from './apikey.js'
-        console.log(api_key)
+        
          // Draws current image from the video element into the canvas
         canvas.getContext('2d').drawImage(video, 0, 0, 300,300);   
         img = canvas.toDataURL("image/jpeg").split(';base64,')[1];
