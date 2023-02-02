@@ -85,7 +85,7 @@
             method: "post",  
             mode : "cors",
              headers: {
-                'x-api-key': "jTRrK1sdwz25zX1DmlVHq5MX4GNa3Tjp8PuB31zf",
+            
                 'content-type': 'application/json'},
             body: JSON.stringify(datatosend)
              })
@@ -105,7 +105,7 @@ async function snapshot2() {
             method: "post",  
             mode : "cors",
              headers: {
-                'x-api-key': "jTRrK1sdwz25zX1DmlVHq5MX4GNa3Tjp8PuB31zf",
+               
                 'content-type': 'application/json'},
             body: JSON.stringify(datatosend)
              })
