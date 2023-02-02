@@ -2,7 +2,7 @@
   <head>
   </head>
   <body onload="init();">
-    <h1>V9: Aadhaar Masking / Selfie Recapture Detection Live Demo</h1>
+    <h1>V10: Aadhaar Masking / Selfie Recapture Detection Live Demo</h1>
    Click on the Start WebCam, then proceed to take photo.
      <p>
     <button onclick="startWebcam();">Start WebCam</button>
