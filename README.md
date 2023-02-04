@@ -105,7 +105,7 @@ async function snapshot2() {
             method: "post",  
             mode : "cors",
              headers: {
-               
+               'x-api-key' : 'V6Vbjk0jtn3FJZSoMZ16k9Rsz8zVf8eO53jBtIQw',
                 'content-type': 'application/json'},
             body: JSON.stringify(datatosend)
              })
