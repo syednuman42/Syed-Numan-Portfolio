@@ -2,7 +2,7 @@
   <head>
   </head>
   <body onload="init();">
-    <h1>V20: Aadhaar Masking / Selfie Recapture Detection Live Demo</h1>
+    <h1>V21: Aadhaar Masking / Selfie Recapture Detection Live Demo</h1>
    Click on the Start WebCam, then proceed to take photo.
      <p>
     <button onclick="startWebcam();">Start WebCam</button>
@@ -85,7 +85,7 @@
             method: "post",  
             mode : "cors",
              headers: {
-            
+           'x-api-key' : 'V6Vbjk0jtn3FJZSoMZ16k9Rsz8zVf8eO53jBtIQw',
                 'content-type': 'application/json'},
             body: JSON.stringify(datatosend)
              })
