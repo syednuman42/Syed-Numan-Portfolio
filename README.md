@@ -10,7 +10,7 @@
  <script>
  window.haptikInitSettings = {
  "business-id": "6772",
- "client-id": "fa4b1156e008690649baafd96f842e7d5c4f0385",
+ "account-id": "fa4b1156e008690649baafd96f842e7d5c4f0385",
  "base-url": "https://staging.hellohaptik.com/",
  };
  </script>
