@@ -6,7 +6,7 @@
  <meta content="width=device-width; initial-scale=1.0;" name="viewport" />
  </head>
  <body>
- ...Some HTML Code Snippet...
+ ...Some HTML Code Snippet2...
  <script>
  window.haptikInitSettings = {
  "business-id": "6772",
