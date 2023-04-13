@@ -1,121 +1,23 @@
+<!DOCTYPE html>
 <html>
-  <head>
-  </head>
-  <body onload="init();">
-    <h1>V21: Aadhaar Masking / Selfie Recapture Detection Live Demo</h1>
-   Click on the Start WebCam, then proceed to take photo.
-     <p>
-    <button onclick="startWebcam();">Start WebCam</button>
-    <button onclick="snapshot2();">Selfie Recapture Detection</button> 
-    <button onclick="snapshot();">Aadhaar Masking</button>      
-    </p>
-    
-    <video onclick="snapshot(this);" width=300 height=300 id="video" controls autoplay></video>
-
-  
-   <pre>              Input Frame                              Detection Output </pre>
-
-<canvas  id="myCanvas" width="300" height="300"></canvas>  
-<img id="img" src="" height=300 width=300 />
-
-  </body>
-  <script>
-
-      //--------------------
-      // GET USER MEDIA CODE
-      //--------------------
-          navigator.getUserMedia = ( navigator.getUserMedia ||
-                             navigator.webkitGetUserMedia ||
-                             navigator.mozGetUserMedia ||
-                             navigator.msGetUserMedia);
-
-      var video;
-      var webcamStream;
-            
-      function startWebcam() {
-        if (navigator.getUserMedia) {
-           navigator.getUserMedia (
-
-              // constraints
-              {audio: false,
-               video: true
-                 
-              },
-
-              // successCallback
-              function(localMediaStream) {
-                  video = document.querySelector('video');
-                 video.srcObject=localMediaStream;
-                 webcamStream = localMediaStream;
-              },
-
-              // errorCallback
-              function(err) {
-                 console.log("The following error occured: " + err);
-              }
-           );
-        } else {
-           console.log("getUserMedia not supported");
-        }  
-      }
-            
-      function stopWebcam() {
-          webcamStream.stop();
-      }
-      //---------------------
-      // TAKE A SNAPSHOT CODE
-      //---------------------
-      var canvas, ctx;
-
-      function init() {
-        // Get the canvas and obtain a context for
-        // drawing in it
-        canvas = document.getElementById("myCanvas");
-        ctx = canvas.getContext('2d');
-      }
-
-      async function snapshot() {
-
-         // Draws current image from the video element into the canvas
-        canvas.getContext('2d').drawImage(video, 0, 0, 300,300);   
-        img = canvas.toDataURL("image/jpeg").split(';base64,')[1];
-        // console.log(img);
-        datatosend = {'project':1,'byte_image':img};
-        let result = await fetch("https://y1xv8eaws6.execute-api.ap-south-1.amazonaws.com/default/portfolio2", {                      
-            method: "post",  
-            mode : "cors",
-             headers: {
-           'x-api-key' : 'V6Vbjk0jtn3FJZSoMZ16k9Rsz8zVf8eO53jBtIQw',
-                'content-type': 'application/json'},
-            body: JSON.stringify(datatosend)
-             })
-        .then(response=>response.json())
-
-document.getElementById("img").src = result
-      }
-
-async function snapshot2() {
-        
-         // Draws current image from the video element into the canvas
-        canvas.getContext('2d').drawImage(video, 0, 0, 300,300);   
-        img = canvas.toDataURL("image/jpeg").split(';base64,')[1];
-        // console.log(img);
-        datatosend = {'project':2,'byte_image':img};
-        let result = await fetch("https://y1xv8eaws6.execute-api.ap-south-1.amazonaws.com/default/portfolio2", {                      
-            method: "post",  
-            mode : "cors",
-             headers: {
-               'x-api-key' : 'V6Vbjk0jtn3FJZSoMZ16k9Rsz8zVf8eO53jBtIQw',
-                'content-type': 'application/json'},
-            body: JSON.stringify(datatosend)
-             })
-        .then(response=>response.json())
-
-document.getElementById("img").src = result
-      }
-
-
-
-  </script>
+ <head>
+ <title>Haptik JS SDK Integration Demo</title>
+ <meta charset="UTF-8" />
+ <meta content="width=device-width; initial-scale=1.0;" name="viewport" />
+ </head>
+ <body>
+ ...Some HTML Code Snippet...
+ <script>
+ window.haptikInitSettings = {
+ "business-id": "6772",
+ "client-id": "fa4b1156e008690649baafd96f842e7d5c4f0385",
+ "base-url": "https://staging.hellohaptik.com/",
+ };
+ </script>
+ <script
+ type="text/javascript"
+ charset="UTF-8"
+ src="https://toolassets.haptikapi.com/platform/javascript-xdk/production/loader.js"
+ ></script>
+ </body>
 </html>
-
